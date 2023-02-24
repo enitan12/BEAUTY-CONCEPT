@@ -1,4 +1,6 @@
-////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////
 // Slider
 const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
@@ -23,8 +25,15 @@ const createDots = function () {
 createDots();
 
 const activateDot = function(slide) {
-  
-}
+  document
+  .querySelectorAll('.dots__dot')
+  .forEach(dot => dot.classList
+    .remove('dots__dot--active'));
+
+ document
+  .querySelector(`.dots__dot[data-slide="${slide}"]`)
+  .classList.add('dots__dot--active');
+};
 
 const goToSlide = function(slide) {
   slides.forEach(
@@ -41,6 +50,7 @@ const nextSlide = function () {
     curSlide++;
   }
   goToSlide(curSlide);
+  activateDot(curSlide);
 };
 
 const prevSlide = function () {
@@ -49,7 +59,8 @@ const prevSlide = function () {
   } else {
     curSlide--;
   }
-  goToSlide(curSlide)
+  goToSlide(curSlide);
+  activateDot(curSlide)
 };
 
 btnRight.addEventListener('click', nextSlide);
@@ -64,5 +75,6 @@ dotContainer.addEventListener('click', function (e) {
   if (e.target.classList.contains('dots__dot')) {
     const { slide } = e.target.dataset;
     goToSlide(slide);
+    activateDot(slide)
   }
 }); 

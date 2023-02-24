@@ -1,3 +1,18 @@
+:root {
+  --color-primary: #c51d5d;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+
 * {
     margin: 0;
     padding: 0;
@@ -12,14 +27,255 @@ html {
 
 body {
     font-family:'Montserrat', sans-serif;
-    background-image: url(Images/salon\ background.webp);
+    /* background-image: url(Images/salon\ background.webp); */
+    background-color: rgb(253, 230, 232);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
+p {
+  color: antiquewhite;
+}
 
+button:focus {
+  outline: none;
+}
 
-/* Slider Stle Starts */
+/* NAVIGATION BAR STARTS */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 9rem;
+  width: 100%;
+  padding: 0 6rem;
+  z-index: 1000;
+}
+
+.nav.sticky {
+  position: fixed;
+  background-color: rgb(239, 169, 179);
+}
+
+.nav__logo {
+  height: 4.5rem;
+  transition: all 0.3s;
+}
+
+.nav__links {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+
+.nav__item {
+  margin-left: 4rem;
+}
+
+.nav__link:link,
+.nav__link:visited {
+  font-size: 1.7rem;
+  font-weight: 400;
+  color: rgb(250, 5, 128);
+  text-decoration: none;
+  display: block;
+  transition: all 0.3s;
+  }
+  
+  .nav__link--btn:link,
+  .nav__link--btn:visited {
+    padding: 0.8rem 2.5rem;
+    border-radius: 3rem;
+    background-color: var(--color-tertiary-opacity);
+    color: rgb(239, 83, 127);
+  }
+  
+  .nav__link--btn:hover,
+  .nav__link--btn:active {
+    color: inherit;
+    background-color: var(--color-tertiary-opacity);
+    color: #fff;
+  } 
+
+  /* HEADER */
+  .header {
+    padding: 0 3rem;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header__title {
+    flex: 1;
+    max-width: 115rem;
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    row-gap: 3rem;
+    align-content: center;
+    justify-content: center;
+    align-items: start;
+    justify-items: start;
+  }
+
+  h1 {
+    font-size: 4.5rem;
+    line-height: 1.35;
+    color: rgb(171, 115, 115);
+  }
+  
+  h4 {
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: rgb(171, 115, 115);
+  }
+  
+  .header__img {
+    /* width: 100%; */
+    grid-column: 2 / 3;
+    grid-row: 1 / span 4;
+    transform: translateY(-6rem);
+    background-size: contain;
+  }
+  
+  .highlight {
+    position: relative;
+  }
+  
+  .highlight::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.7;
+    transform: scale(1.07, 1.05) skewX(-15deg);
+    background-color: rgb(253, 164, 179);
+  }
+
+  .btn {
+    display: inline-block;
+    background-color: var(--color-primary);
+    font-size: 1.6rem;
+    font-family: inherit;
+    font-weight: 500;
+    border: none;
+    padding: 1.25rem 4.5rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  btn:hover {
+    background-color: var(--color-primary-opacity);
+  }
+
+  .btn--text {
+    display: inline-block;
+    background: none;
+    font-size: 1.7rem;
+    font-family: inherit;
+    font-weight: 300;
+    color: var(--color-primary);
+    border: none;
+    border-bottom: 1px solid currentColor;
+    padding-bottom: 2px;
+    cursor: pointer;
+    transition: all 0.3s;
+  }
+
+  /* GRID STYLE STARTS */
+  .container {
+    width: 100%;
+    max-width: 120rem;
+    margin: auto;
+    padding: 0 1.5rem;
+  }
+
+  .image-gallery {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap: 1.5rem;
+    /* grid-template-areas: ; */
+  }
+
+  .image-gallery a {
+    width: 100%;
+    height: 25rem;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+  }
+
+  .image-gallery a i {
+    color: rgba(255, 255, 255, .6);
+    font-size: 3rem;
+    position: relative;
+    z-index: 100;
+    padding: 1rem 3rem;
+    border: 2px solid rgba(255, 255, 255, .6);
+    border-radius: .4rem;
+    /* opacity: 0; */
+    transition: opacity .5s;
+  }
+
+  .image-gallery a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .8);
+    opacity: 0;
+    transition: opacity .5s;
+  }
+
+  .image-gallery a:hover i,
+  .image-gallery a:hover::before {
+    opacity: 1;
+  }
+
+  .img-1{
+    grid-area: img-1;
+    background-image: url(./Images/makeup10.jpeg);
+  }
+
+  .img-2{
+    grid-area: img-1;
+    background-image: url(./Images/makeup9.jpg);
+  }
+
+  .img-3{
+    grid-area: img-1;
+    background-image: url(./Images/nails\ 4.jpg);
+  }
+
+  .img-4{
+    grid-area: img-1;
+    background-image: url(./Images/product12.jpeg);
+  }
+
+  .img-5{
+    grid-area: img-1;
+    background-image: url(./Images/spa3.jpg);
+  }
+
+  .img-6{
+    grid-area: img-1;
+    background-image: url(./Images/wig\ 10.jpg);
+  }
+
+/* Slider Style Starts */
 .slider {
     max-width: 100rem;
     height: 50rem;
@@ -45,8 +301,8 @@ body {
   
   .slide > img {
     /* Only for images that have different size than slide */
-    width: 100%;
-    height: 100%;
+    width: 900px;
+    height: 450px;
     object-fit: cover;
   }
   
@@ -85,7 +341,7 @@ body {
   
   .dots__dot {
     border: none;
-    background-color: #b9b9b9;
+    background-color: rgb(205, 110, 161);
     opacity: 0.7;
     height: 1rem;
     width: 1rem;
@@ -103,7 +359,7 @@ body {
   }
   
   .dots__dot--active {
-    /* background-color: #fff; */
-    background-color: #888;
+    background-color: rgb(254, 91, 145); 
+    /* background-color: #888; */
     opacity: 1;
   }

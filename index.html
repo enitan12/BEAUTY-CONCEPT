@@ -4,18 +4,72 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Beauty Website</title>
+    <title>Joss Beauty Website</title>
     <link rel="shortcut icon" href="./Images/JBC LOGO-1.jpg">
     <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+        <header class="header">
+            <nav class="nav">
+                <img 
+                  src="./Images/JBC LOGO-1.jpg" 
+                  alt="Joss Beauty Concept" 
+                  class="nav__logo"
+                  id="logo">
+            <ul class="nav__links">
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Home</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Service</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Statement</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link">Products</a>
+                </li>
+                <li class="nav__item">
+                    <a href="#" class="nav__link nav__link--btn btn--show-modal">Contact Us</a>
+                </li>
+            </ul>
+            </nav>
+
+            <div class="header__title">
+                <h1>
+                    Your
+                    <span class="highlight">Beauty</span>
+                    our<br>
+                    <span class="highlight">Pride</span>
+                </h1>
+                <h4>Always waiting to bring out the beauty in you</h4>
+                <button class="btn--text btn--scroll-to">Learn more &DownArrow;;</button>
+                <img
+                 src="./Images/header image.avif" 
+                 alt="" 
+                 class="header__img">
+            </div>
+        </header>
+
+        <div class="container">
+            <div class="image-gallery">
+                <a href="Images/makeup10.jpeg" class="img-1"></a>
+                <a href="Images/makeup9.jpg" class="img-2"></a>
+                <a href="Images/nails 4.jpg" class="img-3"></a>
+                <a href="Images/product12.jpeg" class="img-4"></a>
+                <a href="Images/spa3.jpg" class="img-5"></a>
+                <a href="Images/wig 10.jpg" class="img-6"></a>
+            </div>
+        </div>
+
     <section class="slider">
-        <div class="slide"><img src="./Images/makeup7.jpg" alt="Photo 1" /></div>
-        <div class="slide"><img src="img/img-2.jpg" alt="Photo 2" /></div>
-        <div class="slide"><img src="img/img-3.jpg" alt="Photo 3" /></div>
-        <div class="slide"><img src="img/img-4.jpg" alt="Photo 4" /></div>
+        <div class="slide"><img src="./Images/makeup10.jpeg" alt="Photo 1" /></div>
+        <div class="slide"><img src="./Images/nails 10.jpg" alt="Photo 2" /></div>
+        <div class="slide"><img src="./Images/product9.webp" alt="Photo 3" /></div>
+        <div class="slide"><img src="./Images/spa4.jpg" alt="Photo 4" /></div>
+        <div class="slide"><img src="./Images/wig2.png" alt="Photo 5" /></div>
         
         <button class="slider__btn slider__btn--left">&larr;</button>
         <button class="slider__btn slider__btn--right">&rarr;</button>
