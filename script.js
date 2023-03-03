@@ -5,7 +5,9 @@
 const slides = document.querySelectorAll('.slide');
 const btnLeft = document.querySelector('.slider__btn--left');
 const btnRight = document.querySelector('.slider__btn--right');
-const dotContainer = document.querySelector('.dots')
+const dotContainer = document.querySelector('.dots');
+const section1 = document.querySelector('#section--1');
+const nav = document.querySelector('.nav')
 
 let curSlide = 0;
 const maxSlide = slides.length;
@@ -78,3 +80,15 @@ dotContainer.addEventListener('click', function (e) {
     activateDot(slide)
   }
 }); 
+
+///////////////////////////////////////////////////////////////////
+// Sticky Navigation
+const initialCoords = section1.getBoundingClientRect();
+console.log(initialCoords);
+
+window.addEventListener('scroll', function() {
+  console.log(window.scrollY);
+
+if(this.window.scrollY > initialCoords.top) nav.classList.add('sticky')
+ else nav.classList.remove('sticky');
+});
