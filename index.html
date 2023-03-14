@@ -1,132 +1,153 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Joss Beauty Website</title>
-    <link rel="shortcut icon" href="./Images/JBC LOGO-1.jpg">
-    <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-        <header class="header">
-            <nav class="nav">
-                <a href="">
-                    <img 
-                  src="./Images/JBC LOGO-1.jpg" 
-                  alt="Joss Beauty Concept" 
-                  class="nav__logo"
-                  id="logo">
-                </a>
-            <ul class="nav__links">
-                <li class="nav__item">
-                    <a href="#section--first" class="nav__link">Home</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#section--1" class="nav__link">Statement</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Service</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#section--2" class="nav__link">Products</a>
-                </li>
-                <li class="nav__item">
-                    <a href="#" class="nav__link">Contact Us</a>
-                </li>
-            </ul>
-            </nav>
+    <link rel="shortcut icon" href="./Images/JBC LOGO-1.jpg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat&family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="navbar">
+        <div class="logo">
+          <img src="Images/JBC LOGO-1.jpg" class="img-logo" alt="" />
+        </div>
+        <ul class="links">
+          <li><a href="#">Home</a></li>
+          <li><a href="section--1">Statement</a></li>
+          <li><a href="section--2">Service</a></li>
+          <li><a href="slider--img">Products</a></li>
+        </ul>
+        <a href="#" class="action_btn">Contact Us</a>
+        <div class="toggle_btn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </nav>
 
-            <div class="header__title">
-                <h1>
-                    Your
-                    <span class="highlight">Beauty</span>
-                    our<br>
-                    <span class="highlight">Pride</span>
-                </h1>
-                <h4>Always waiting to bring out the beauty in you</h4>
-                <button class="btn--text btn--scroll-to">Learn more &DownArrow;;</button>
-                <img
-                 src="./Images/header image.avif" 
-                 alt="" 
-                 class="header__img"
-            </div>
-        </header>
+      <div class="dropdown_menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="section--1">Statement</a></li>
+        <li><a href="section--2">Service</a></li>
+        <li><a href="slider--img">Products</a></li>
+        <li><a href="#" class="action_btn">Contact Us</a></li>
+      </div>
 
+      <div class="header__title">
+        <h1>
+          Your
+          <span class="highlight">Beauty</span>
+          our<br />
+          <span class="highlight">Pride</span>
+        </h1>
+        <h4>Always waiting to bring out the beauty in you</h4>
+        <button class="btn--text btn--scroll-to">
+          Learn more &DownArrow;;
+        </button>
+        <img src="./Images/header image.avif" alt="" class="header__img"
+      </div>
+    </header>
 
-        <section class="section" id="section--1">
-            <div class="title">
-                <h1>Statement</h1>
-            </div>
-            <div class="services">
-                <div class="card">
-                    <div class="icon">
-                        <i class="fa fa-bullseye"></i>
-                    </div>
-                    <h2>MISSION</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non deserunt quam voluptatem quidem. Dolores qui eligendi, corrupti unde est provident!</p>
-                    <a href="" class="button">Read More</a>
-                </div>
-                <div class="card">
-                    <div class="icon">
-                        <i class="fa fa-eye"></i>
-                    </div>
-                    <h2>VISION</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non deserunt quam voluptatem quidem. Dolores qui eligendi, corrupti unde est provident!</p>
-                    <a href="" class="button">Read More</a>
-                </div>
-                <div class="card">
-                    <div class="icon">
-                        <i class="fa fa-diamond"></i>
-                    </div>
-                    <h2>VALUE</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non deserunt quam voluptatem quidem. Dolores qui eligendi, corrupti unde est provident!</p>
-                    <a href="" class="button">Read More</a>
-                </div>
-            </div>
-        </section>
-        <section class="section" id="section--2">
-            <div class="container">
-                <div class="image-gallery">
-                    <a href="Images/makeup10.jpeg" class="img-1"></a>
-                    <a href="Images/makeup9.jpg" class="img-2"></a>
-                    <a href="Images/nails 4.jpg" class="img-3"></a>
-                    <a href="Images/nails2.jpg" class="img-4"></a>
-                    <a href="Images/product6.jpg" class="img-5"></a>
-                    <a href="Images/product14.jpeg" class="img-6"></a>
-                    <a href="Images/spa2.webp" class="img-7"></a>
-                    <a href="Images/wig3.jpg" class="img-8"></a>
-                </div>
-            </div>
-        </section>
+    <section class="section" id="section--1">
+      <div class="title">
+        <h1>Statement</h1>
+      </div>
+      <div class="services">
+        <div class="card">
+          <div class="icon">
+            <i class="fa fa-bullseye"></i>
+          </div>
+          <h2>MISSION</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+            deserunt quam voluptatem quidem. Dolores qui eligendi, corrupti unde
+            est provident!
+          </p>
+          <a href="" class="button">Read More</a>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="fa fa-eye"></i>
+          </div>
+          <h2>VISION</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+            deserunt quam voluptatem quidem. Dolores qui eligendi, corrupti unde
+            est provident!
+          </p>
+          <a href="" class="button">Read More</a>
+        </div>
+        <div class="card">
+          <div class="icon">
+            <i class="fa fa-diamond"></i>
+          </div>
+          <h2>VALUE</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non
+            deserunt quam voluptatem quidem. Dolores qui eligendi, corrupti unde
+            est provident!
+          </p>
+          <a href="" class="button">Read More</a>
+        </div>
+      </div>
+    </section>
 
-    <section class="slider">
-        <div class="slide"><img src="./Images/makeup10.jpeg" alt="Photo 1"/></div>
-        <div class="slide"><img src="./Images/nails 10.jpg" alt="Photo 2"/></div>
-        <div class="slide"><img src="./Images/product9.webp" alt="Photo 3"/></div>
-        <div class="slide"><img src="./Images/spa4.jpg" alt="Photo 4"/></div>
-        <div class="slide"><img src="./Images/wig2.png" alt="Photo 5"/></div>
-        
-        <button class="slider__btn slider__btn--left">&larr;</button>
-        <button class="slider__btn slider__btn--right">&rarr;</button>
-        <div class="dots"></div>
+    <section class="section" id="section--2">
+      <div class="container">
+        <div class="image-gallery">
+          <a href="Images/makeup10.jpeg" class="img-1"></a>
+          <a href="Images/makeup9.jpg" class="img-2"></a>
+          <a href="Images/nails 4.jpg" class="img-3"></a>
+          <a href="Images/nails2.jpg" class="img-4"></a>
+          <a href="Images/product6.jpg" class="img-5"></a>
+          <a href="Images/product14.jpeg" class="img-6"></a>
+          <a href="Images/spa2.webp" class="img-7"></a>
+          <a href="Images/wig3.jpg" class="img-8"></a>
+        </div>
+      </div>
+    </section>
+
+    <section class="slider" id="slider--img">
+      <div class="slide">
+        <img src="./Images/makeup10.jpeg" alt="Photo 1" />
+      </div>
+      <div class="slide"><img src="./Images/nails 10.jpg" alt="Photo 2" /></div>
+      <div class="slide">
+        <img src="./Images/product9.webp" alt="Photo 3" />
+      </div>
+      <div class="slide"><img src="./Images/spa4.jpg" alt="Photo 4" /></div>
+      <div class="slide"><img src="./Images/wig2.png" alt="Photo 5" /></div>
+
+      <button class="slider__btn slider__btn--left">&larr;</button>
+      <button class="slider__btn slider__btn--right">&rarr;</button>
+      <div class="dots"></div>
     </section>
 
     <footer>
-        <p>Joss Beauty Website</p>
-        <div class="nav-footer-page">
-            <a href="#">Home</a>
-            <a href="#section--1">Statement</a>
-            <a href="#">Service</a>
-            <a href="#section--2">Products</a>
-            <a href="#">Contact Us</a>
-        </div>
-        <p class="end">Copyright &copy; By Adewole Christiana</p>
+      <p class="joss" id="Contact">Joss Beauty Website</p>
+      <div class="nav-footer-page">
+        <a href="#">Home</a>
+        <a href="#section--1">Statement</a>
+        <a href="#">Service</a>
+        <a href="#section--2">Products</a>
+        <a href="# ">Contact Us</a>
+      </div>
+      <p class="end">Copyright &copy; By Adewole Christiana</p>
     </footer>
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

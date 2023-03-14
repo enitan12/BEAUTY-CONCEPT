@@ -1,13 +1,11 @@
-
-
 /////////////////////////////////////////////////////////////
 // Slider
-const slides = document.querySelectorAll('.slide');
-const btnLeft = document.querySelector('.slider__btn--left');
-const btnRight = document.querySelector('.slider__btn--right');
-const dotContainer = document.querySelector('.dots');
-const section1 = document.querySelector('#section--1');
-const nav = document.querySelector('.nav')
+const slides = document.querySelectorAll(".slide");
+const btnLeft = document.querySelector(".slider__btn--left");
+const btnRight = document.querySelector(".slider__btn--right");
+const dotContainer = document.querySelector(".dots");
+const section1 = document.querySelector("#section--1");
+const nav = document.querySelector(".nav");
 
 let curSlide = 0;
 const maxSlide = slides.length;
@@ -19,35 +17,34 @@ const maxSlide = slides.length;
 const createDots = function () {
   slides.forEach(function (_, i) {
     dotContainer.insertAdjacentHTML(
-      'beforeend',
+      "beforeend",
       `<button class="dots__dot" data-slide="${i}"></button>`
     );
   });
 };
 createDots();
 
-const activateDot = function(slide) {
+const activateDot = function (slide) {
   document
-  .querySelectorAll('.dots__dot')
-  .forEach(dot => dot.classList
-    .remove('dots__dot--active'));
+    .querySelectorAll(".dots__dot")
+    .forEach((dot) => dot.classList.remove("dots__dot--active"));
 
- document
-  .querySelector(`.dots__dot[data-slide="${slide}"]`)
-  .classList.add('dots__dot--active');
+  document
+    .querySelector(`.dots__dot[data-slide="${slide}"]`)
+    .classList.add("dots__dot--active");
 };
 
-const goToSlide = function(slide) {
+const goToSlide = function (slide) {
   slides.forEach(
     (s, i) => (s.style.transform = `translateX(${100 * (i - slide)}%)`)
   );
 };
-goToSlide(0)
+goToSlide(0);
 
 //Next slide
 const nextSlide = function () {
-  if(curSlide === maxSlide - 1) {
-    curSlide = 0
+  if (curSlide === maxSlide - 1) {
+    curSlide = 0;
   } else {
     curSlide++;
   }
@@ -62,33 +59,45 @@ const prevSlide = function () {
     curSlide--;
   }
   goToSlide(curSlide);
-  activateDot(curSlide)
+  activateDot(curSlide);
 };
 
-btnRight.addEventListener('click', nextSlide);
-btnLeft.addEventListener('click', prevSlide);
+btnRight.addEventListener("click", nextSlide);
+btnLeft.addEventListener("click", prevSlide);
 
-document.addEventListener('keydown', function (e) {
-  if (e.key === 'ArrowLeft') prevSlide();
-  e.key === 'ArrowRight' && nextSlide();
+document.addEventListener("keydown", function (e) {
+  if (e.key === "ArrowLeft") prevSlide();
+  e.key === "ArrowRight" && nextSlide();
 });
 
-dotContainer.addEventListener('click', function (e) {
-  if (e.target.classList.contains('dots__dot')) {
+dotContainer.addEventListener("click", function (e) {
+  if (e.target.classList.contains("dots__dot")) {
     const { slide } = e.target.dataset;
     goToSlide(slide);
-    activateDot(slide)
+    activateDot(slide);
   }
-}); 
+});
 
 ///////////////////////////////////////////////////////////////////
 // Sticky Navigation
 const initialCoords = section1.getBoundingClientRect();
 console.log(initialCoords);
 
-window.addEventListener('scroll', function() {
+window.addEventListener("scroll", function () {
   console.log(window.scrollY);
 
-if(this.window.scrollY > initialCoords.top) nav.classList.add('sticky')
- else nav.classList.remove('sticky');
+  if (this.window.scrollY > initialCoords.top) nav.classList.add("sticky");
+  else nav.classList.remove("sticky");
 });
+
+// Toggle Btn
+const toggleBtn = document.querySelector(".toggle_btn");
+const toggleBtnIcon = document.querySelector(".toggle_btn i");
+const dropDownMenu = document.querySelector(".dropdown_menu");
+
+toggleBtn.onclick = function () {
+  dropDownMenu.classList.toggle("open");
+  const isOpen = dropDownMenu.classList.contains("open");
+
+  toggleBtnIcon.classList = isOpen ? "fa-solid fa-xmark" : "fa-solid fa-bars";
+};
