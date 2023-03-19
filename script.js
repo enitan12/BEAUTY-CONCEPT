@@ -4,7 +4,7 @@ const slides = document.querySelectorAll(".slide");
 const btnLeft = document.querySelector(".slider__btn--left");
 const btnRight = document.querySelector(".slider__btn--right");
 const dotContainer = document.querySelector(".dots");
-const section1 = document.querySelector("#section--1");
+const section1 = document.querySelector("section1");
 const nav = document.querySelector(".nav");
 
 let curSlide = 0;
