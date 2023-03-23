@@ -80,14 +80,9 @@ dotContainer.addEventListener("click", function (e) {
 
 ///////////////////////////////////////////////////////////////////
 // Sticky Navigation
-const initialCoords = section1.getBoundingClientRect();
-console.log(initialCoords);
-
-window.addEventListener("scroll", function () {
-  console.log(window.scrollY);
-
-  if (this.window.scrollY > initialCoords.top) nav.classList.add("sticky");
-  else nav.classList.remove("sticky");
+window.add("scroll", function () {
+  var nav = document.querySelector("nav");
+  nav.classList.toggle("sticky", window.scrollY > 0);
 });
 
 // Toggle Btn
