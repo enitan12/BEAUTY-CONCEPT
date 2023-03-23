@@ -78,13 +78,6 @@ dotContainer.addEventListener("click", function (e) {
   }
 });
 
-///////////////////////////////////////////////////////////////////
-// Sticky Navigation
-window.add("scroll", function () {
-  var nav = document.querySelector("nav");
-  nav.classList.toggle("sticky", window.scrollY > 0);
-});
-
 // Toggle Btn
 const toggleBtn = document.querySelector(".toggle_btn");
 const toggleBtnIcon = document.querySelector(".toggle_btn i");
